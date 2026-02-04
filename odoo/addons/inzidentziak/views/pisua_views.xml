@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Vista árbol/lista -->
+    <record id="view_inzidentzia_tree" model="ir.ui.view">
+        <field name="name">inzidentzia.tree</field>
+        <field name="model">inzidentziak</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="irakasle_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista formulario -->
+    <record id="view_inzidentzia_form" model="ir.ui.view">
+        <field name="name">inzidentzia.form</field>
+        <field name="model">inzidentziak</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="irakaslea_id"/>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista -->
+    <record id="action_inzidentzia" model="ir.actions.act_window">
+        <field name="name">Inzidentzia Informatikoak</field>
+        <field name="res_model">inzidentziak</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú -->
+    <menuitem id="menu_inzidentziak_root" name="Inzidentziak"/>
+    <menuitem id="menu_inzidentziak" name="Inzidentzia Infromatikoak" parent="menu_inzidentziak_root" action="action_inzidentzia"/>
+</odoo>
