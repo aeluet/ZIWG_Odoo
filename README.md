@@ -16,7 +16,7 @@
    
 3. Klonatu errepositorioa AWS Instantzian
 4. Instalatu Docker
-````
+```
   # Add Docker's official GPG key:
     sudo apt update
     sudo apt install ca-certificates curl
@@ -35,23 +35,23 @@
     EOF
     
     sudo apt update
-    ````
+```
     Azken bertsioa instalatu
     
-    ````
+    ```
     sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-    ````
+    ```
     
 5. Docker kontenedoreak deskargatu
     
-    ````
+    ```
     sudo docker compose up
-    ````
+    ```
     
 6. Docker kontenedoreak hasi
     
-    ````
+    ```
     sudo docker compose start
-    ````
+    ```
 7. Odoo-ra sartu instantziaren IP Publikoa erabiliz, hasieratu Laravel aplikazioaren email eta pasahitz berdinak erabiliz, ikusi .env
 8. Inzidentziak aktibatu aplikazio atalean.
