@@ -17,7 +17,8 @@
 3. Klonatu errepositorioa AWS Instantzian
 4. Instalatu Docker
     ```
-  # Add Docker's official GPG key:
+    
+    # Add Docker's official GPG key:
     sudo apt update
     sudo apt install ca-certificates curl
     sudo install -m 0755 -d /etc/apt/keyrings
