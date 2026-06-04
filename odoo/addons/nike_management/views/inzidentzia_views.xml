@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Vista árbol/lista -->
+    <record id="view_inzidentzia_tree" model="ir.ui.view">
+        <field name="name">nike.nike.tree</field>
+        <field name="model">nike.nike</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="izena"/>
+                <field name="modeloa"/>
+		<field name="tamaina"/>
+		<field name="prezioa"/>
+                <field name="irakaslea_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista formulario -->
+    <record id="view_inzidentzia_form" model="ir.ui.view">
+        <field name="name">nike.nike.form</field>
+        <field name="model">nike.nike</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="izena"/>
+                        <field name="modeloa"/>
+			<field name="tamaina"/>
+			<field name="prezioa"/>
+                        <field name="irakaslea_id"/>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista -->
+    <record id="action_nike" model="ir.actions.act_window">
+        <field name="name">Nike Oinetakoak</field>
+        <field name="res_model">nike.nike</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú -->
+    <menuitem id="menu_nike_root" name="Nike"/>
+    <menuitem id="menu_nike" name="Nike" parent="menu_nike_root" action="action_nike"/>
+</odoo>
